@@ -42,7 +42,7 @@ async def start_set(_, query: CallbackQuery):
         f"""ههݪاެ حبيب [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) ❤️‍🔥\n
 اެناެ بَۅت بَمميࢪ࣪اެتَ متَعدَدةَ ݪتشغِيݪ اެݪاغاެنِي فَي اެݪمَجمَۅعاتَ 🥇.
 
--› MᥲᎥꪀƚᥲᎥꪀᥱძ ხy -› [S᥆ᥙrᥴᥱ Frᥱᥱძ᥆ꪔ](http://t.me/xl444)
+-› MᥲᎥꪀƚᥲᎥꪀᥱძ ხy -› [𝐒𝐎𝐔𝐑𝐂𝐄 𝐈𝐁𝐍 𝐀𝐋-𝐃𝐎𝐑𝐀](https://t.me/x02x2)
 """,
         reply_markup=InlineKeyboardMarkup(
             [
@@ -139,7 +139,7 @@ async def at_set_markup_menu(_, query: CallbackQuery):
     user_id = query.from_user.id
     a = await _.get_chat_member(query.message.chat.id, query.from_user.id)
     if not a.can_manage_voice_chats:
-        return await query.answer("💡 وخر ايدك لاتبعبص محد يكدر يدوس هنا بس الي عنده صلاحية المكالمات !", show_alert=True)
+        return await query.answer("💡 وخر ايدك محد يكدر يدوس هنا بس الي عنده صلاحية المكالمات !", show_alert=True)
     chat_id = query.message.chat.id
     user_id = query.message.from_user.id
     buttons = menu_markup(user_id)
@@ -155,7 +155,7 @@ async def at_set_markup_menu(_, query: CallbackQuery):
 async def is_set_home_menu(_, query: CallbackQuery):
     a = await _.get_chat_member(query.message.chat.id, query.from_user.id)
     if not a.can_manage_voice_chats:
-        return await query.answer("💡 وخر ايدك لاتبعبص محد يكدر يدوس هنا بس الي عنده صلاحية المكالمات !", show_alert=True)
+        return await query.answer("💡 وخر ايدك محد يكدر يدوس هنا بس الي عنده صلاحية المكالمات !", show_alert=True)
     await query.answer("control panel closed")
     user_id = query.message.from_user.id
     buttons = stream_markup(user_id)
@@ -167,7 +167,7 @@ async def is_set_home_menu(_, query: CallbackQuery):
 async def on_close_menu(_, query: CallbackQuery):
     a = await _.get_chat_member(query.message.chat.id, query.from_user.id)
     if not a.can_manage_voice_chats:
-        return await query.answer("💡 وخر ايدك لاتبعبص محد يكدر يدوس هنا بس الي عنده صلاحية المكالمات !", show_alert=True)
+        return await query.answer("💡 وخر ايدك محد يكدر يدوس هنا بس الي عنده صلاحية المكالمات !", show_alert=True)
     await query.message.delete()
 
 
